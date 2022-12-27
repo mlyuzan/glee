@@ -1,6 +1,85 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
-
 @import 'global';
+
+.header{
+  padding: 45px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu{
+  &__list{
+    display: flex;
+  }
+  &__list-item{
+    padding-left: 35px;
+    &:first-child{
+      padding-left: 0;
+    }
+  }
+  &__list-link{
+    font-size: 15px;
+    line-height: 12px;
+    color: #436372;
+    @extend %rubik-500;
+  }
+}
+
+.user-nav{
+  display: flex;
+  &__link{
+    background-color: $accent;
+    padding: 15px;
+    border-radius: 50%;
+  }
+  &__search-link{
+    background-color: #edf1f4;
+    padding: 15px 18px;
+  }
+  &__item{
+    display: flex;
+    padding-left: 20px;
+    &:first-child{
+      padding-left: 0;
+    }
+  }
+  &__item-ul{
+    display: flex;
+    align-items: center;
+    background-color: #fcd7b6;
+    border-radius: 50px;
+    width: 180px;
+    height: 50px;
+  }
+  &__iner{
+    margin-left: 35px;
+    position: relative; 
+  }
+  &__iner-height{
+    height: 32px;
+    width: 1px;
+    background-color: #fde7d3;
+  }
+  &__num{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    background-color: #fff;
+    color: $title;
+    @extend %dmsans-400;
+    font-size: 10px;
+    line-height: 18px;
+    border-radius: 50%;
+    top: -8px;
+    right: -9px;
+  }
+}
+
+
 @import 'media';
