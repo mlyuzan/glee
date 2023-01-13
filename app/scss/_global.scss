@@ -4,3 +4,15 @@
   padding: 0 15px;
 }
 
+.wrapper{
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+a {
+  font-size: 14px;
+  line-height: 24px;
+  color: #7b7b7b;
+  @extend %rubik-400;
+}
+
