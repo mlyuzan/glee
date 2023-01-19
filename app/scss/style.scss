@@ -488,5 +488,21 @@
   }
 }
 
+.video-design{
+  padding: 40px 0;
+  &__popup{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 500px;
+  }
+  &__link{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 
 @import 'media';
