@@ -54,3 +54,18 @@ $bg: #fef7f0;
       bottom: 28px;
     }
 }
+
+%filter-btn {
+  border: none;
+  background-color: transparent;
+  margin-left: 20px;
+  @extend %dmsans-700;
+  color: #8b8b8b;
+  transition: all .3s;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:hover {
+    color: $heading;
+  }
+}

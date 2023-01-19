@@ -319,18 +319,7 @@
     margin-bottom: 80px;
   }
   &__btn{
-    border: none;
-    background-color: transparent;
-    margin-left: 20px;
-    @extend %dmsans-700;
-    color: #8b8b8b;
-    transition: all .3s;
-    &:first-child{
-      margin-left: 0;
-    }
-    &:hover{
-      color: $heading;
-    }
+    @extend %filter-btn;
   }
   &__inner{
     display: grid;
@@ -461,6 +450,41 @@
     top: -100px;
     left: 135px;
     position: absolute;
+  }
+}
+
+.design{
+  padding: 70px 0;
+  &__filter-btn{
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  &__btn{
+    @extend %filter-btn;
+  }
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 35px 30px;
+  }
+}
+
+.design-item{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 245px;
+  padding: 40px;
+  border-radius: 5px;
+  @extend %dmsans-700;
+  &__title{
+    color: $heading;
+    font-size: 20px;
+    margin-bottom: 15px;
+    width: 180px;
+  }
+  &__part{
+    color: $accent;
   }
 }
 
