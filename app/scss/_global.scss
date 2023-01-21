@@ -59,6 +59,10 @@ a {
     }
     &:last-child{
       padding-right: 0;
+      .breadcrumb__link{
+        color: #a5aaaf;
+        
+      }
       &::after {
         display: none;
       }

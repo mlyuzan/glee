@@ -635,7 +635,8 @@
     width: 100%;
     margin-top: 8px;
   }
-  &__btn-login{
+  &__btn-login,
+  &__btn-register{
     width: 100%;
     border: none;
     background-color: $accent;
@@ -644,20 +645,23 @@
     color: #fff;
     margin-bottom: 35px;
   }
+  &__btn-register{
+    margin-bottom: 0;
+  }
   &__reminder{
     display: flex;
     justify-content: space-between;
-    color: #436372;
     padding-bottom: 25px;
     border-bottom: 1px solid #f6f6f6;
   }
   &__reminder-label,
   &__reminder-link,
   &__link-create,
-  &__link{
+  &__link,
+  &__text{
+    color: #436372;
     font-size: 14px;
     @extend %rubik-400;
-    color: inherit;
   }
   &__link{
     display: block;
@@ -671,6 +675,10 @@
     @extend %rubik-500;
     border: 1px solid $accent;
     width: 100%;
+  }
+  &__text {
+    margin-bottom: 25px;
+    
   }
 }
 
