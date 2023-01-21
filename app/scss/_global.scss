@@ -38,3 +38,32 @@ a {
   margin-bottom: 30px;
 }
 
+.partners-page {
+  background-color: $bg;
+  padding: 70px 0 85px;
+}
+
+.breadcrumb{
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item{
+    position: relative;
+    padding-right: 20px;
+    &::after{
+      content: '/';
+      position: absolute;
+      top: 3px;
+      right: 9px;
+    }
+    &:last-child{
+      padding-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+
