@@ -682,5 +682,274 @@
   }
 }
 
+.about{
+  padding: 120px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__images{
+    width: 570px;
+  }
+  &__content{
+    margin-left: 45px;
+    display: flex;
+    align-items: center;
+    max-width: 555px;
+  }
+  &__work-info{
+    margin-bottom: 40px;
+    display: flex;
+  }
+  &__work-number{
+    @extend %poppins-700;
+    color: $accent;
+    font-size: 140px;
+    line-height: 70px;
+  }
+  &__work-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-left: 30px;
+  }
+  &__work-item{
+    color: $title;
+    @extend %rubik-400;
+    line-height: 30px;
+  }
+  &__title{
+    font-size: 36px;
+    color: $title;
+    @extend %dmsans-700;
+    margin-bottom: 40px;
+  }
+  &__text{
+    @extend %rubik-400;
+    line-height: 30px;
+    padding-bottom: 55px;
+    border-bottom: 2px solid #ebeef3; 
+  }
+  &__info{
+    margin-top: 30px;
+    display: flex;
+  }
+  &__info-item{
+    position: relative;
+    padding-left: 90px;
+    padding-right: 25px;
+    border-left: 2px solid #ebeef3;
+    @extend %dmsans-700;
+    &::before{
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      top: 15px;
+      left: 28px;
+      width: 43px;
+      height: 40px;
+    }
+    &:nth-child(1) {
+      padding-left: 57px;
+      border-left: none;
+      &::before {
+        background-image: url('../images/about/1.svg');
+        width: 36px;
+        height: 37px;
+        left: 0;
+      }
+    }
+    &:nth-child(2) {
+      &::before {
+        background-image: url('../images/about/2.svg');
+      }
+    }
+    &:nth-child(3) {
+      padding-right: 0;
+      &::before {
+        background-image: url('../images/about/3.svg');
+      }
+    }
+    
+  }
+  &__info-number{
+    color: $title;
+    font-size: 36px;
+  }
+  &__info-subtitle{
+    color: #4c4c4c;
+  }
+}
+
+.widgets{
+  padding: 80px 0;
+  background-color: #fcd7b6;
+  @extend %dmsans-700;
+  &__inner{
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item{
+    width: 190px;
+    padding-top: 85px;
+    text-align: center;
+    color: $title;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      top: 15px;
+      left: 63px; 
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      border-radius: 50%;  
+      width: 35px;
+      height: 35px;
+      background-color: $accent;
+      top: 40px;
+      right: 54px;
+    }
+    &:nth-child(1){
+      &::after{
+        background-image: url('../images/about/comp.svg');
+        width: 64px;
+        height: 57px;
+      }
+    }
+    &:nth-child(2){
+      &::after{
+        background-image: url('../images/about/posh.svg');
+        width: 64px;
+        height: 40px;
+        top: 25px;
+      }
+    }
+    &:nth-child(3){
+      &::after{
+        background-image: url('../images/about/time.svg');
+        width: 67px;
+        height: 64px;
+        left: 54px;
+      }
+    }
+    &:nth-child(4){
+      &::after{
+        background-image: url('../images/about/star.svg');
+        width: 49px;
+        height: 64px;
+        left: 77px;
+      }
+    }
+  }
+  &__number{
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+}
+
+.team{
+  padding: 120px 0 30px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    width: 300px;
+    color: $title;
+  }
+  &__title{
+    font-size: 36px;
+    @extend %dmsans-700;
+    margin-bottom: 30px;
+  }
+  &__text{
+    @extend %rubik-400;
+    line-height: 30px;
+    margin-bottom: 48px;
+  }
+  &__link{
+    @extend %btn;
+    border-radius: 5px;
+    padding: 17px 25px;
+    &::after {
+      background-image: url('../images/icons/arrow-team.svg');
+      width: 15px;
+      height: 12px;
+      bottom: 23px;
+    }
+  }
+  &__member{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px 30px;
+  }
+  &__member-item{
+    height: 387px;
+  }
+  &__member-img{
+    position: relative;
+  }
+  &__member-info{
+    position: relative;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+    background-color: #fff;
+    max-width: 325px;
+    padding: 30px 20px 30px 25px;
+    top: -55px;
+  }
+  &__member-name{
+    color: #436372;
+    font-size: 22px;
+    @extend %dmsans-700;
+    padding-bottom: 15px;
+  }
+  &__member-position{
+    color: #565872;
+    @extend %rubik-400;
+  }
+  &__member-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__member-social{
+    display: flex;
+  }
+  &__member-link{
+    display: block;
+    background-color: #f6f6f6;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-left: 7px;
+    &::before{
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      left: 11px;
+      bottom: 12px;
+    }
+    &:nth-child(1){
+      margin-left: 0;
+      &::before{
+        background-image: url('../images/team/insta.svg');
+        width: 18px;
+        height: 17px;
+      }
+    }
+    &:nth-child(2){
+      &::before{
+        background-image: url('../images/team/googl.svg');
+        width: 23px;
+        height: 15px;
+      }
+    }
+  }
+}
+
 
 @import 'media';
