@@ -2034,4 +2034,112 @@
   }
 }
 
+.contact{
+  padding-top: 120px;
+  &__subtitle{
+    text-align: center;
+    color: $accent;
+    @extend %poppins-700;
+    margin-bottom: 10px;
+  }
+  &__title{
+    text-align: center;
+    font-size: 35px;
+    color: #436372;
+    @extend %dmsans-700;
+  }
+  &__inner{
+    margin: 65px 0 120px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info{
+    padding: 70px 0;
+    width: 370px;
+    height: 380px;
+    text-align: center;
+    background-color: #fbfbfb;
+    &:hover{
+      border: 2px solid $accent;
+      .contact__info-bg{
+        background-color: $accent;
+        path{
+          fill: #fff;
+        }
+      }
+    }
+  }
+  &__info-bg{
+    transition: all .3s;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 25px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 65px;
+  }
+  &__info-title{
+    color: #222222;
+    @extend %dmsans-700;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  &__info-item{
+    display: flex;
+    flex-direction: column;
+    div,
+    a{
+      font-size: 16px;
+      color: #565872;
+      line-height: 30px;
+      @extend %rubik-400;
+    }
+  }
+  &__infor{
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    .comments-form{
+      width: 620px;
+    }
+    .comments-form__item-input{
+      background-color: #fafafa;
+      border: none;
+      outline: none;
+      &::placeholder{
+        text-transform: uppercase;
+        color: #565872;
+      }
+    }
+    .comments-form__email-input{
+      margin-left: 20px;
+    }
+    .comments-form__textarea{
+      height: 175px;
+      background-color: #fafafa;
+      border: none;
+      outline: none;
+      &::placeholder {
+        text-transform: uppercase;
+        color: #565872;
+      }
+    }
+    .comments-form__btn{
+      border-radius: 5px;
+    }
+  }
+}
+
+.map {
+  
+}
+
+#map {
+  width: 500px;
+  height: 335px;
+}
+
 @import 'media';
