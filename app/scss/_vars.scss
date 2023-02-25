@@ -1,3 +1,4 @@
+$heading: #191919;
 $accent: #a3bbc8;
 $title: #243f4d;
 $bg: #fef7f0;
@@ -26,10 +27,54 @@ $bg: #fef7f0;
 
 %rubik-500 {
   font-family: 'Rubik-Medium', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 %poppins-700 {
   font-family: 'Poppins-Bold', sans-serif;
   font-weight: 700;
+}
+
+%btn {
+  display: block;
+    width: 200px;
+    background-color: $accent;
+    padding: 20px;
+    font-size: 15px;
+    color: #fff;
+    @extend %rubik-400;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../images/slider/arrow-right.png');
+      background-repeat: no-repeat;
+      width: 22px;
+      height: 9px;
+      right: 25px;
+      bottom: 28px;
+    }
+}
+
+%filter-btn {
+  border: none;
+  background-color: transparent;
+  margin-left: 20px;
+  @extend %dmsans-700;
+  color: #8b8b8b;
+  transition: all .3s;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:hover {
+    color: $heading;
+  }
+}
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
 }

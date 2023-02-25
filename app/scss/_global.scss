@@ -12,6 +12,13 @@ main{
   flex-grow: 1;
 }
 
+a {
+  font-size: 14px;
+  line-height: 24px;
+  color: #7b7b7b;
+  @extend %rubik-400;
+}
+
 .container {
   max-width: 1770px;
   margin: 0 auto;
@@ -23,11 +30,98 @@ main{
   margin: 0 auto;
 }
 
+.title{
+  @extend %dmsans-700;
+  color: $heading;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-a {
-  font-size: 14px;
-  line-height: 24px;
-  color: #7b7b7b;
-  @extend %rubik-400;
+.partners-page {
+  background-color: $bg;
+  padding: 70px 0 85px;
+}
+
+.breadcrumb{
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item{
+    position: relative;
+    padding-right: 20px;
+    &::after{
+      content: '/';
+      position: absolute;
+      top: 3px;
+      right: 9px;
+    }
+    &:last-child{
+      padding-right: 0;
+      .breadcrumb__link{
+        color: #a5aaaf;
+        
+      }
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.pagination {
+  padding-top: 75px;
+  display: flex;
+  justify-content: center;
+  &.pagination--active{
+    justify-content: start;
+  }
+  &__list {
+    display: flex;
+  }
+  &__item,
+  &__item-next {
+    transition: all .3s;
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid $accent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background-color: $accent;
+      .pagination__link {
+        color: #fff;
+      }
+    }
+  }
+  &__item--active {
+    background-color: $accent;
+    .pagination__link {
+      color: #fff;
+    }
+  }
+  &__link,
+  &__next{
+    color: $title;
+  }
+  &__item-next{
+    width: 75px;
+    &:hover {
+      background-color: $accent;
+      .pagination__next{
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 500px){
+  .title{
+    font-size: 32px;
+  }
 }
 
