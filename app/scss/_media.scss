@@ -215,7 +215,7 @@
       &::before{
         content: '';
         position: absolute;
-        background-color: $accent;
+        background-color: #a3bbc8;
         width: 25px;
         height: 3px;
         top: 0;
@@ -223,7 +223,7 @@
       &::after{
         content: '';
         position: absolute;
-        background-color: $accent;
+        background-color: #a3bbc8;
         width: 25px;
         height: 3px;
         bottom: 0;
@@ -232,7 +232,7 @@
         position: absolute;
         width: 25px;
         height: 3px;
-        background-color: $accent;
+        background-color: #a3bbc8;
         transform: translateY(-1px);
       }
     }
